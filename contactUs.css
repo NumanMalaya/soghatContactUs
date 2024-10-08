@@ -3,13 +3,6 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.nbar{
-    position: static;
-    padding-bottom: 0px;
-}
-.nbar .r2, .nbar .r3{
-    display: none;
-}
 .contact-page-c1 .contact-page-r1 .contact-page-cl1 h2{
     font-weight: 700;
     font-family: "Poppins", sans-serif;
@@ -65,7 +58,7 @@
     transition: 0.5s;
     cursor: pointer;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .input-group-1 input{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .input-group-1 input{
     width: 100%;
     outline: none;
     padding: 18px 0px 7px;
@@ -73,22 +66,22 @@
     border-bottom: 1px solid black;
     font-size: 13px;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .input-group-1{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .input-group-1{
     margin-top: 5px;
     width: 49.5%;
     position: relative;
     display: inline-block;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .input-group-1 label{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .input-group-1 label{
     position: absolute;
     font-size: 12px;
     font-weight: 500;
     color: rgb(0, 0, 0);
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .radio-input-group{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .radio-input-group{
     display: inline;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .radio{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .radio{
     width: 13px;
     height: 12px;
     border-radius: 50%; 
@@ -97,12 +90,12 @@
     cursor: pointer;
     position: relative;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .radio:checked {
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .radio:checked {
     background-color: rgba(251, 181, 40, 1);
     color: white;
     border-color: rgba(251, 181, 40, 1);
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .radio:checked::before{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .radio:checked::before{
     content: '✓';
     color: white;
     font-size: 15px;
@@ -111,12 +104,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 span{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form span{
     font-size: 13px;
     margin: 0px 15px 0px 5px;
     font-family: "Poppins", sans-serif;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .message-input-group .message-input{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .message-input-group .message-input{
     width: 100%;
     outline: none;
     padding: 20px 0px 10px;
@@ -124,17 +117,17 @@
     border-bottom: 1px solid black;
     font-size: 13px;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .message-input-group{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .message-input-group{
     margin-top: 30px;
     position: relative;
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .message-input-group .message-label{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .message-input-group .message-label{
     position: absolute;
     font-size: 12px;
     font-weight: 500;
     color: rgb(0, 0, 0);
 }
-.contact-page-c1 .contact-page-r2 .contact-page-cl2 .submitBtn{
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .submitBtn{
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -144,6 +137,33 @@
     color: white;
     float: right; 
     box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .modal{
+    display: none; 
+    z-index: 1000; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.632); 
+}
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .modal-content{
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 30px 20px 10px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 340px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .close{
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+}
+.contact-page-c1 .contact-page-r2 .contact-page-cl2 form .close:hover{
+    color: black;
+    cursor: pointer;
 }
 .contact-page-c1 .contact-page-r2 .contact-page-cl2{
     position: relative;

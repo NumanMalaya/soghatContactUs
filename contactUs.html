@@ -12,6 +12,15 @@
 </head>
 
 <body>
+    <style>
+        .nbar{
+            position: static;
+            padding-bottom: 0px;
+        }
+        .nbar .r2, .nbar .r3{
+            display: none;
+        }
+    </style>
     <div class="container-fluid p-xl-5 pt-xl-4 p-lg-4 p-md-2 pt-4 contact-page-c1">
         <div class="row contact-page-r1">
             <div class="col text-center contact-page-cl1">
@@ -67,7 +76,15 @@
                         <label class="message-label">Message</label>
                         <input type="text" placeholder="Write your message..." class="message-input contact-page-input">
                     </div>
-                    <button name="submit" class="submitBtn mt-4">Send Message</button>
+                    <button name="submit" id="submitBtn" class="submitBtn mt-4">Send Message</button>
+                     <!-- Modal -->
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <div class="close">&times;</div>
+                            <h6 class="pb-1">Message Sent!</h6>
+                            <p>Your message has been successfully sent. Thank you!</p>
+                        </div>
+                    </div>
                 </form>
                 <img src="pics/letter_send 2.png" class="arrow-img" alt="">
             </div>  
@@ -94,14 +111,14 @@
             </div>
         </div>
     </div>
-
+    
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="contactUs.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
+        
 </body>
 
 </html>

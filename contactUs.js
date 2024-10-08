@@ -6,5 +6,17 @@ $(document).ready(function () {
         $(this).css({ 'border-bottom': '', 'color': ''});
         $(this).prev('label').css({ 'color': '' }); 
     });
+    $('#submitBtn').on('click', function(event) {
+        event.preventDefault(); 
+        $('#myModal').css('display', 'block'); 
+    });
+    $('.close').on('click', function() {
+        $('#myModal').css('display', 'none');
+    });
+    $(window).on('click', function(event) {
+        if ($(event.target).is('#myModal')) {
+            $('#myModal').css('display', 'none'); 
+        }
+    });
     
 });
