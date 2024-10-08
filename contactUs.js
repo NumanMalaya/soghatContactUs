@@ -6,17 +6,33 @@ $(document).ready(function () {
         $(this).css({ 'border-bottom': '', 'color': ''});
         $(this).prev('label').css({ 'color': '' }); 
     });
-    $('#submitBtn').on('click', function(event) {
-        event.preventDefault(); 
-        $('#myModal').css('display', 'block'); 
-    });
-    $('.close').on('click', function() {
-        $('#myModal').css('display', 'none');
-    });
-    $(window).on('click', function(event) {
-        if ($(event.target).is('#myModal')) {
-            $('#myModal').css('display', 'none'); 
+    $('form').on('submit', function(event) {
+        let isValid = true;
+        $('.contact-page-input').each(function() {
+            const inputVal = $(this).val().trim(); 
+            if (inputVal === '') { 
+                isValid = false; 
+            } 
+        });
+        if ($('input[name="reason"]:checked').length === 0) {
+            isValid = false; 
+        }
+        if (!isValid) {
+            event.preventDefault(); 
+            $('#error-modal').css('display', 'block'); 
+        } 
+        else {
+            event.preventDefault();
+            $('#sent-modal').css('display', 'block'); 
         }
     });
-    
+    $('.close').on('click', function() {
+        $('.modal').css('display', 'none');
+    });
+    $(window).on('click', function(event) {
+        if ($(event.target).is('.modal')) {
+            $('.modal').css('display', 'none'); 
+        }
+    });
+
 });

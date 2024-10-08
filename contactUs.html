@@ -54,35 +54,53 @@
                 <form action="">
                     <div class="input-group-1 pe-md-2">
                         <label for="">First Name</label>
-                        <input type="text" class="contact-page-input">
+                        <input type="text" required class="contact-page-input">
                     </div>
                     <div class="input-group-1 ps-md-2">
                         <label for="" class="">last Name</label>
-                        <input type="text" class="contact-page-input">
+                        <input type="text" required class="contact-page-input">
                     </div>
                     <div class="input-group-1 mt-md-5 pe-md-2">
                         <label for="">Email</label>
-                        <input type="text" class="contact-page-input">
+                        <input type="email" required class="contact-page-input">
                     </div>
                     <div class="input-group-1 mt-md-5 ps-md-2">
                         <label for="">Phone Number</label>
-                        <input type="text" class="contact-page-input">
+                        <input type="text" required class="contact-page-input">
                     </div>
                     <h6 class="fw-bold" style="font-family: 'Poppins', sans-serif; margin-top: 40px;">Select Subject?</h6>
-                    <div class="radio-input-group"><input type="radio" class="radio" name="reason"> <span>General Inquiry</span></div>
+                    <div class="radio-input-group"><input type="radio" class="radio" required name="reason"> <span>General Inquiry</span></div>
                     <div class="radio-input-group"><input type="radio" class="radio" name="reason"> <span>General Inquiry</span></div>
                     <div class="radio-input-group"><input type="radio" class="radio" name="reason"> <span>General Inquiry</span></div>
                     <div class="message-input-group">
                         <label class="message-label">Message</label>
-                        <input type="text" placeholder="Write your message..." class="message-input contact-page-input">
+                        <input type="text" required placeholder="Write your message..." class="message-input contact-page-input">
                     </div>
-                    <button name="submit" id="submitBtn" class="submitBtn mt-4">Send Message</button>
-                     <!-- Modal -->
-                    <div id="myModal" class="modal">
-                        <div class="modal-content">
+                    <button name="submit" id="submitBtn" type="submit" class="submitBtn mt-4">Send Message</button>
+                    <!-- Sent Modal -->
+                    <div id="sent-modal" class="modal">
+                        <div class="modal-content text-center">
                             <div class="close">&times;</div>
-                            <h6 class="pb-1">Message Sent!</h6>
+                            <div class="tick-container" id="tickContainer">
+                                <svg class="tick" viewBox="0 0 24 24">
+                                    <path class="tick-path" d="M4 12l4 4L20 6" />
+                                </svg>
+                            </div>
+                            <h6>Message Sent!</h6>
                             <p>Your message has been successfully sent. Thank you!</p>
+                        </div>
+                    </div>
+                    <!-- Error Modal -->
+                    <div id="error-modal" class="modal">
+                        <div class="modal-content text-center">
+                            <div class="close">&times;</div>
+                            <div class="cross-container" id="crossContainer">
+                                <svg class="cross" viewBox="0 0 24 24">
+                                    <path class="cross-path" d="M4 4l16 16M4 20l16-16" />
+                                </svg>
+                            </div>
+                            <h6>Alert Message!</h6>
+                            <p>Please fill valid Information. Thank you!</p>
                         </div>
                     </div>
                 </form>
